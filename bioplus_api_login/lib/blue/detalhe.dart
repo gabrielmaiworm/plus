@@ -15,13 +15,14 @@ class Detalhe extends StatefulWidget {
   final String dados;
   final int index;
 
-  const Detalhe({Key? key, required this.dados, required this.index}) : super(key: key);
+  const Detalhe({Key? key, required this.dados, required this.index})
+      : super(key: key);
   @override
   _DetalheState createState() => _DetalheState();
 }
 
 class _DetalheState extends State<Detalhe> {
-  late YoutubePlayerController _controller;
+  late YoutubePlayerController? _controller;
   @override
   void initState() {
     _info = json.decode(widget.dados);
@@ -74,11 +75,11 @@ class _DetalheState extends State<Detalhe> {
             body: Column(
               children: [
                 YoutubePlayer(
-                  controller: _controller,
+                  controller: _controller!,
                   showVideoProgressIndicator: true,
                   progressIndicatorColor: Colors.amber,
                   onReady: () {
-                    _controller.play();
+                    _controller?.play();
                   },
                 ),
                 Expanded(

@@ -408,11 +408,13 @@ packages:
     source: hosted
     version: "3.2.0"
   flutter_inappwebview:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: flutter_inappwebview
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: master
+      resolved-ref: a76ed7b1aafb4867517f2ed47dda9e9d15cf32d6
+      url: "https://github.com/rshrc/flutter_inappwebview"
+    source: git
     version: "5.4.3+7"
   flutter_launcher_icons:
     dependency: "direct dev"

@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+
   flutter:
     sdk: flutter
   flutter_localizations:
@@ -109,6 +110,13 @@ flutter_icons:
   ios: true
   remove_alpha_ios: true
   image_path: 'assets/images/app_launcher_icon.png'
+
+  
+dependency_overrides:
+  flutter_inappwebview:
+    git:
+      url: https://github.com/rshrc/flutter_inappwebview
+      ref: master
 
 
 # For information on the generic Dart part of this file, see the
